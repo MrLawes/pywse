@@ -1,1 +1,2 @@
-# pywse
+* *>>>* import pywse
+* *>>>* pywse.learn()
