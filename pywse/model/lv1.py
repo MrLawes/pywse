@@ -13,7 +13,7 @@ class Countries(object):
 
     @property
     def sentence(self):
-        return "I am {demonym}, I'm from {name}, I speak {language}. {name} is located in {state}, the capital is {capital}."
+        return u"I am {demonym}, I'm from {name}, I speak {language}. {name} is located in {state}, the capital is {capital}."
 
     @property
     def ask(self):
