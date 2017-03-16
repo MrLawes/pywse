@@ -10,4 +10,3 @@ def learn():
     exec('%s.start()' % lv)
 
 learn()# TODO delete
-
