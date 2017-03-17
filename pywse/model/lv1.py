@@ -26,7 +26,7 @@ class Countries(object):
                 kwargs[k] = getattr(self, k)
             else:
                 kwargs[k] = '____'
-        return self.sentence.format(**kwargs)
+        return self.sentence.format(**kwargs).encode('utf-8')
 
     @property
     def answer(self):
