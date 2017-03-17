@@ -13,12 +13,13 @@ class Countries(object):
 
     @property
     def sentence(self):
-        return u"I am {demonym}, I'm from {name}, I speak {language}. {name} is located in {state}, the capital is {capital}."
+        return u"{name_zh}: I'm from {name}, I am {demonym}, I speak {language}. {name} is located in {state}, the capital is {capital}."
 
     @property
     def ask(self):
         random_list = ['name', 'demonym']
         display_list = random.sample(random_list, 1)
+        display_list.append('name_zh')
         kwargs = copy.deepcopy(self.__kwargs)
         for k in kwargs:
             if k in display_list:
@@ -37,7 +38,7 @@ class Questions(object):
         self.ask_questions = []
         self.country = None
         for question in questions:
-            if question['name'] == country or question.get('name_zh', '') == country:
+            if question['name'] == country or question['name_zh'] == country:
                 self.country = Countries(**question)
             self.ask_questions.insert(0, Countries(**question))
         # random.shuffle(self.ask_questions)

@@ -27,6 +27,7 @@ if __name__ == '__main__':
         question = question.replace("u'", "'")
         exec('question=u"""    %s"""' % (question))
         question =question.replace("'name_zh': ", "'name_zh': u")
+        question += ','
         print question
         time.sleep(1)
 
