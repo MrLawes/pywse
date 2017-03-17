@@ -13,26 +13,36 @@ questions = [
     # {'name': 'Netherlands','demonym': '	Dutch','state': 'Europe','language': 'Dutch','currency': 'Euro','capital': 'Amsterdam',},
     # {'name': 'Malaysia','state': 'Asia', 'demonym': 'Malaysian','language': 'Malaysia','currency': 'Ringgit','capital': 'Kuala Lumpur',},
 
-    # checked
+    # Asia
     {"name": "China", "state": "Asia", "demonym": "Chinese", "language": "Chinese", "currency": "Renminbi", "capital": "Beijing"},
     {"name": "India", "state": "Asia", "demonym": "Indian", "language": "Hindi", "currency": "rupee", "capital": "New Delhi"},
-    {"name": "U.S.", "state": "North America", "demonym": "American", "language": "English", "currency": "dollar", "capital": "Washington, D.C."},
     {"name": "Indonesia", "state": "Asia", "demonym": "Indonesian", "language": "Indonesian", "currency": "rupiah", "capital": "Jakarta"},
     {"name": "Pakistan", "state": "Asia", "demonym": "Pakistani", "language": "Urdu", "currency": "rupee", "capital": "Islamabad"},
-    {"name": "Nigeria", "state": "Africa", "demonym": "Nigerian", "language": "English", "currency": "Naira", "capital": "Abuja"},
     {"name": "Bangladesh", "state": "Asia", "demonym": "Bangladeshi", "language": "Bengali", "currency": "Taka", "capital": "Dhaka"},
+    {"name": "Philippines", "state": "Asia", "demonym": "Philippine", "language": "Filipino", "currency": "Peso", "capital": "Manila"},
+    {"name": "Japan", "state": "Asia", "demonym": "Japanese", "language": "Japanese", "currency": "Yen", "capital": "Tokyo"},
+    {"name": "Iran", "state": "Asia", "demonym": "Iranian", "language": "Persian", "currency": "Rial", "capital": "Tehran"},
+    {"name": "Thailand", "state": "Asia", "demonym": "Thai", "language": "Thai", "currency": "Baht", "capital": "Bangkok"},
+    # Europe
     {"name": "Russia", "state": "Europe", "demonym": "Russian", "language": "Russian", "currency": "ruble", "capital": "Moscow"},
+    {"name": "Germany", "state": "Europe", "demonym": "German", "language": "German", "currency": "Euro", "capital": "Berlin"},
+    {"name": "Turkey", "state": "Europe", "demonym": "Turkish", "language": "Turkish", "currency": "lira", "capital": "Ankara"},
+    # North America
+    {"name": "U.S.", "state": "North America", "demonym": "American", "language": "English", "currency": "dollar", "capital": "Washington, D.C."},
+    {"name": "Mexico", "state": "North America", "demonym": "Mexican", "language": "Spanish", "currency": "Peso", "capital": "Mexico City"},
+    # South America
 
-    {"name": "Mexico", "state": "North America", "demonym": "Mexican", "language": "None at", "currency": "Peso", "capital": "and largest city"},
-    {"name": "Japan", "state": "Asia", "demonym": "Japanese", "language": "None", "currency": "Yen", "capital": "and largest city"},
-    {"name": "Ethiopia", "state": "Africa", "demonym": "Ethiopian", "language": "All Ethiopian languages", "currency": "Birr", "capital": "and largest city"},
-    {"name": "Philippines", "state": "Asia", "demonym": "", "language": "", "currency": "Peso", "capital": "Manila"},
-    {"name": "Egypt", "state": "Africa", "demonym": "Egyptian", "language": "Arabic", "currency": "Egyptian pound", "capital": "and largest city"},
-    {"name": "DR Congo", "state": "Africa", "demonym": "Congolese", "language": "French", "currency": "Congolese franc", "capital": "and largest city"},
-    {"name": "Iran", "state": "Asia", "demonym": "Iranian, Persian", "language": "Persian", "currency": "Rial", "capital": "and largest city"},
-    {"name": "Germany", "state": "Europe", "demonym": "German", "language": "German", "currency": "Euro", "capital": "and largest city"},
-    {"name": "Turkey", "state": "Europe", "demonym": "", "language": "Turkish", "currency": "Turkish lira", "capital": "Ankara"},
-    {"name": "Thailand", "state": "Asia", "demonym": "Thai", "language": "Thai", "currency": "Baht", "capital": "and largest city"},
+    # Africa
+    {"name": "Nigeria", "state": "Africa", "demonym": "Nigerian", "language": "English", "currency": "Naira", "capital": "Abuja"},
+    {"name": "Ethiopia", "state": "Africa", "demonym": "Ethiopian", "language": "Ethiopian", "currency": "Birr", "capital": "Addis Ababa"},
+    {"name": "Egypt", "state": "Africa", "demonym": "Egyptian", "language": "Arabic", "currency": "Egyptian pound", "capital": "Cairo"},
+    {"name": "DR Congo", "state": "Africa", "demonym": "Congolese", "language": "French", "currency": "franc", "capital": "Kinshasa"},
+
+
+
+
+
+
     {"name": "U.K.", "state": "Europe", "demonym": "", "language": "", "currency": "Pound", "capital": "and largest city"},
     {"name": "France", "state": "Europe", "demonym": "French", "language": "", "currency": "", "capital": "and largest city"},
     {"name": "Italy", "state": "Europe", "demonym": "Italian", "language": "Italian", "currency": "Euro (", "capital": "and largest city"},
