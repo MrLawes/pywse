@@ -11,7 +11,7 @@ questions = [
     {'name': 'Iran', 'language': 'Persian', 'demonym': 'Iranian', 'currency': 'Rial', 'state': 'Asia', 'capital': 'Tehran', 'name_zh': u'伊朗'},
     {'name': 'Thailand', 'language': 'Thai', 'demonym': 'Thai', 'currency': 'Baht', 'state': 'Asia', 'capital': 'Bangkok', 'name_zh': u'泰国'},
     {'name': 'Myanmar', 'language': 'Burmese', 'demonym': 'Myanma', 'currency': 'Kyat', 'state': 'Asia', 'capital': 'Naypyidaw', 'name_zh': u'缅甸'},
-    {'name': 'South Korea', 'language': 'Korean', 'demonym': 'Korean', 'currency': 'South Korean won', 'state': 'Asia', 'capital': 'Seoul', 'name_zh': u'南韩'},
+    {'name': 'South Korea', 'language': 'Korean', 'demonym': 'Korean', 'currency': 'South Korean won', 'state': 'Asia', 'capital': 'Seoul', 'name_zh': u'韩国'},
     {'name': 'Iraq', 'language': 'Arabic', 'demonym': 'Iraqi', 'currency': 'Iraqi dinar', 'state': 'Asia', 'capital': 'Baghdad', 'name_zh': u'伊拉克共和国'},
     {'name': 'Afghanistan', 'language': 'Pashto', 'demonym': 'Afghan', 'currency': 'Afghani', 'state': 'Asia', 'capital': 'Kabul', 'name_zh': u'阿富汗'},
     {'name': 'Saudi Arabia', 'language': 'Arabic', 'demonym': 'Saudi', 'currency': 'Saudi riyal', 'state': 'Asia', 'capital': 'Riyadh', 'name_zh': u'沙特阿拉伯'},
