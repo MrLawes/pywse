@@ -37,7 +37,7 @@ class Questions(object):
         self.ask_questions = []
         for question in questions:
             self.ask_questions.insert(0, Countries(**question))
-        random.shuffle(self.ask_questions)
+        # random.shuffle(self.ask_questions)
 
     def start(self):
         while self.ask_questions:

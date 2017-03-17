@@ -138,7 +138,7 @@ if __name__ == '__main__':
             del countries_html
             time.sleep(1)
         except:
-            f_error = open('error.txt', 'wb+')
+            f_error = open('error.txt', 'a+')
             f_error.write(country + ':\n')
             f_error.write(traceback.format_exc())
             f_error.close()
