@@ -100,7 +100,10 @@ class CountriesHtml(HTMLParser):
                 if DEBUG is True:
                     print arg, data.decode('utf=8'), self.kwargs[arg]
                 if self.kwargs[arg] is 0:
-                    self.kwargs[arg] = data.decode('utf=8')
+                    if data in ('and largest city', '','Largest city'):
+                        self.kwargs[arg] += 1
+                    else:
+                        self.kwargs[arg] = data.decode('utf=8')
 
         for arg in self.conditions.keys():
             condition = self.conditions[arg]['condition'][-1]
