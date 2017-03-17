@@ -103,7 +103,10 @@ class CountriesHtml(HTMLParser):
                     if data in ('and largest city', '','Largest city'):
                         self.kwargs[arg] += 1
                     else:
-                        self.kwargs[arg] = data.decode('utf=8')
+                        if isinstance(data, unicode):
+                            self.kwargs[arg] = data
+                        else:
+                            self.kwargs[arg] = data.decode('utf-8')
 
         for arg in self.conditions.keys():
             condition = self.conditions[arg]['condition'][-1]
@@ -129,19 +132,21 @@ class CountriesHtml(HTMLParser):
 if __name__ == '__main__':
 
     for country in countries:
-        try:
-            c_url = url % (country)
-            r = requests.get(c_url)
-            countries_html = CountriesHtml(country=country)
-            countries_html.feed(r.content.decode('utf-8'))
-            f_countries = open('countries.txt', 'a+')
-            print countries_html.infos
-            f_countries.write(countries_html.infos + '\n')
-            f_countries.close()
-            del countries_html
-            time.sleep(1)
-        except:
-            f_error = open('error.txt', 'a+')
-            f_error.write(country + ':\n')
-            f_error.write(traceback.format_exc())
-            f_error.close()
+        while True:
+            try:
+                c_url = url % (country)
+                r = requests.get(c_url)
+                countries_html = CountriesHtml(country=country)
+                countries_html.feed(r.content.decode('utf-8'))
+                f_countries = open('countries.txt', 'a+')
+                print countries_html.infos
+                f_countries.write(countries_html.infos + '\n')
+                f_countries.close()
+                del countries_html
+                time.sleep(1)
+                break
+            except:
+                f_error = open('error.txt', 'a+')
+                f_error.write(country + ':\n')
+                f_error.write(traceback.format_exc())
+                f_error.close()
