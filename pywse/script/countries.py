@@ -5,60 +5,65 @@ import requests
 from collections import OrderedDict
 import json
 import time
+from pywse.conf.countries import countries_list
+import traceback
 
-countries = ['Brazil', ]
+countries = countries_list
 url = 'https://en.wikipedia.org/wiki/%s'
+
 
 DEBUG = False
 
 class CountriesHtml(HTMLParser):
 
-    conditions = {
-        'capital': {
-            'condition': [
-                {'<data>': 'Capital'},
-                {'tag': 'a'},
-                {'tag': 'td'},
-                {'tag': 'table'},
-            ],
-            'value': '',
-            'value_index': 2,
-        },
-        'demonym': {
-            'condition': [
-                {'<data>': 'Demonym'},
-                {'tag': 'a'},
-                {'tag': 'td'},
-                {'tag': 'table'},
-            ],
-            'value': '',
-            'value_index': 2,
-        },
-        'language': {
-            'condition': [
-                {'<data>': 'languages'},
-                {'tag': 'a'},
-                {'tag': 'td'},
-                {'tag': 'table'},
-            ],
-            'value': '',
-            'value_index': 2,
-        },
-        'currency': {
-            'condition': [
-                {'<data>': 'Currency'},
-                {'tag': 'a'},
-                {'tag': 'td'},
-                {'tag': 'table'},
-            ],
-            'value': '',
-            'value_index': 2,
-        },
-    }
-
-    find_capital = 0
-    kwargs = { 'state': '' }
-    states = ['North America', 'South America', 'Asia', 'Africa', 'Europe', 'Oceania']
+    def __init__(self, country):
+        self.conditions = {
+            'capital': {
+                'condition': [
+                    {'<data>': 'Capital'},
+                    {'tag': 'a'},
+                    {'tag': 'td'},
+                    {'tag': 'table'},
+                ],
+                'value': '',
+                'value_index': 2,
+            },
+            'demonym': {
+                'condition': [
+                    {'<data>': 'Demonym'},
+                    {'tag': 'a'},
+                    {'tag': 'td'},
+                    {'tag': 'table'},
+                ],
+                'value': '',
+                'value_index': 2,
+            },
+            'language': {
+                'condition': [
+                    {'<data>': 'languages'},
+                    {'tag': 'a'},
+                    {'tag': 'td'},
+                    {'tag': 'table'},
+                ],
+                'value': '',
+                'value_index': 2,
+            },
+            'currency': {
+                'condition': [
+                    {'<data>': 'Currency'},
+                    {'tag': 'a'},
+                    {'tag': 'td'},
+                    {'tag': 'table'},
+                ],
+                'value': '',
+                'value_index': 2,
+            },
+        }
+        self.country = country
+        self.find_capital = 0
+        self.kwargs = { 'state': '', 'name': country }
+        self.states = ['North America', 'South America', 'Asia', 'Africa', 'Europe', 'Oceania']
+        HTMLParser.__init__(self)
 
     def pop_condition(self, arg):
         if not arg in self.conditions:
@@ -104,7 +109,8 @@ class CountriesHtml(HTMLParser):
                     self.kwargs[arg] = None
                     self.pop_condition(arg=arg)
 
-    def __str__(self):
+    @property
+    def infos(self):
         result = OrderedDict()
         for arg in ('name', 'state', 'demonym', 'language', 'currency', 'capital'):
             result[arg] = '{%s}' % (arg)
@@ -118,11 +124,21 @@ class CountriesHtml(HTMLParser):
         return result.encode('utf-8')
 
 if __name__ == '__main__':
+
     for country in countries:
-        c_url = url % (country)
-        r = requests.get(c_url)
-        countries_html = CountriesHtml()
-        countries_html.feed(r.content)
-        countries_html.kwargs['name'] = country
-        print countries_html
-        time.sleep(1)
+        try:
+            c_url = url % (country)
+            r = requests.get(c_url)
+            countries_html = CountriesHtml(country=country)
+            countries_html.feed(r.content.decode('utf-8'))
+            f_countries = open('countries.txt', 'a+')
+            print countries_html.infos
+            f_countries.write(countries_html.infos + '\n')
+            f_countries.close()
+            del countries_html
+            time.sleep(1)
+        except:
+            f_error = open('error.txt', 'wb+')
+            f_error.write(country + ':\n')
+            f_error.write(traceback.format_exc())
+            f_error.close()
