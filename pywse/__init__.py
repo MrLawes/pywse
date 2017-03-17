@@ -1,7 +1,8 @@
 import model
 
 # Show the choices to user
-HELPS = """1: countries
+HELPS = """1: Practice countries
+2: Which country do you want to practice
 Waiting for your input (such as 1): """
 
 def learn():

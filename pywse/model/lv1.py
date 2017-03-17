@@ -33,9 +33,12 @@ class Countries(object):
 
 class Questions(object):
 
-    def __init__(self):
+    def __init__(self, country=''):
         self.ask_questions = []
+        self.country = None
         for question in questions:
+            if question['name'] == country or question.get('name_zh', '') == country:
+                self.country = Countries(**question)
             self.ask_questions.insert(0, Countries(**question))
         # random.shuffle(self.ask_questions)
 
@@ -44,6 +47,12 @@ class Questions(object):
             country = self.ask_questions.pop()
             raw_input(country.ask)
             print country.answer, '\n'
+
+    def practice(self):
+        if self.country:
+            print self.country.answer, '\n'
+        else:
+            print "Can not find country, send email to haiou_chen@sina.cn for help."
 
 def start():
     questions = Questions()
