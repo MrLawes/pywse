@@ -3,7 +3,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-VERSION = '2.0.0'
+VERSION = '2.1.0'
 
 setup(
     name='pywse',
