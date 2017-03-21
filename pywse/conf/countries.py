@@ -2,11 +2,14 @@
 
 questions = [
     {'name': 'China', 'language': 'Chinese', 'demonym': 'Chinese', 'currency': 'Renminbi', 'state': 'Asia', 'capital': 'Beijing', 'name_zh': u'中国'},
-    {'name': 'India', 'language': 'Hindi', 'demonym': 'Indian', 'currency': 'rupee', 'state': 'Asia', 'capital': 'New Delhi', 'name_zh': u'印度'},
-    {'name': 'Indonesia', 'language': 'Indonesian', 'demonym': 'Indonesian', 'currency': 'rupiah', 'state': 'Asia', 'capital': 'Jakarta', 'name_zh': u'印尼'},
-    {'name': 'Pakistan', 'language': 'Urd', 'demonym': 'Pakistani', 'currency': 'rupee', 'state': 'Asia', 'capital': 'Islamabad', 'name_zh': u'巴基斯坦'},
+
     {'name': 'Bangladesh', 'language': 'Bengali', 'demonym': 'Bangladeshi', 'currency': 'Taka', 'state': 'Asia', 'capital': 'Dhaka', 'name_zh': u'孟加拉共和国'},
+    {'name': 'India', 'language': 'Hindi', 'demonym': 'Indian', 'currency': 'rupee', 'state': 'Asia', 'capital': 'New Delhi', 'name_zh': u'印度'},
+    {'name': 'Pakistan', 'language': 'Urdu', 'demonym': 'Pakistani', 'currency': 'rupee', 'state': 'Asia', 'capital': 'Islamabad', 'name_zh': u'巴基斯坦'},
+
     {'name': 'Philippines', 'language': 'Filipino', 'demonym': 'Philippine', 'currency': 'Peso', 'state': 'Asia', 'capital': 'Manila', 'name_zh': u'菲律宾'},
+    {'name': 'Indonesia', 'language': 'Indonesian', 'demonym': 'Indonesian', 'currency': 'rupiah', 'state': 'Asia', 'capital': 'Jakarta', 'name_zh': u'印尼'},
+
     {'name': 'Japan', 'language': 'Japanese', 'demonym': 'Japanese', 'currency': 'Yen', 'state': 'Asia', 'capital': 'Tokyo', 'name_zh': u'日本'},
     {'name': 'Iran', 'language': 'Persian', 'demonym': 'Iranian', 'currency': 'Rial', 'state': 'Asia', 'capital': 'Tehran', 'name_zh': u'伊朗'},
     {'name': 'Thailand', 'language': 'Thai', 'demonym': 'Thai', 'currency': 'Baht', 'state': 'Asia', 'capital': 'Bangkok', 'name_zh': u'泰国'},

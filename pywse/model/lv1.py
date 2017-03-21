@@ -17,8 +17,9 @@ class Countries(object):
 
     @property
     def ask(self):
-        random_list = ['name', 'demonym']
-        display_list = random.sample(random_list, 1)
+        display_list = []
+        # random_list = ['name', 'demonym']
+        # display_list = random.sample(random_list, 1)
         display_list.append('name_zh')
         kwargs = copy.deepcopy(self.__kwargs)
         for k in kwargs:
