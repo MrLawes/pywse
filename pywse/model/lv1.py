@@ -8,12 +8,13 @@ class Countries(object):
 
     def __init__(self, **kwargs):
         self.__kwargs = kwargs
+        self.index = 1
         for k in kwargs:
             setattr(self, k, kwargs[k])
 
     @property
     def sentence(self):
-        return u"{name_zh}: I'm from {name}, I am {demonym}. The capital is {capital}."
+        return str(self.index) + u".{name_zh}: I'm from {name}, I am {demonym}. The capital is {capital}."
 
     # @property
     # def sentence(self):
@@ -42,7 +43,8 @@ class Questions(object):
     def __init__(self, country=''):
         self.ask_questions = []
         self.country = None
-        for question in questions:
+        for index, question in enumerate(questions):
+            question['index'] = index + 1
             if question['name'] == country or question['name_zh'] == country:
                 self.country = Countries(**question)
             self.ask_questions.insert(0, Countries(**question))
