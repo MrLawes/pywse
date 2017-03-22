@@ -11,10 +11,10 @@ questions = [
     {'name': 'Thailand', 'language': 'Thai', 'demonym': 'Thai', 'currency': 'Baht', 'state': 'Asia', 'capital': 'Bangkok', 'name_zh': u'泰国'},
     {'name': 'Myanmar', 'language': 'Burmese', 'demonym': 'Burmese', 'currency': 'Kyat', 'state': 'Asia', 'capital': 'Naypyidaw', 'name_zh': u'缅甸'},
     {'name': 'Bangladesh', 'language': 'Bengali', 'demonym': 'Bangladeshi', 'currency': 'Taka', 'state': 'Asia', 'capital': 'Dhaka', 'name_zh': u'孟加拉共和国'},
-    {'name': 'Bhutan', 'language': 'Dzongkha', 'demonym': 'Bhutanese', 'currency': 'Ngultrum', 'state': 'Asia', 'capital': 'Thimph', 'name_zh': u'不丹'},
-    {'name': 'Nepal', 'language': 'Nepali', 'demonym': 'Nepali', 'currency': 'Nepalese rupee', 'state': 'Asia', 'capital': 'Kathmand', 'name_zh': u'尼泊尔'},
+    {'name': 'Bhutan', 'language': 'Dzongkha', 'demonym': 'Bhutanese', 'currency': 'Ngultrum', 'state': 'Asia', 'capital': 'Thimphu', 'name_zh': u'不丹'},
+    {'name': 'Nepal', 'language': 'Nepali', 'demonym': 'Nepali', 'currency': 'Nepalese rupee', 'state': 'Asia', 'capital': 'Kathmandu', 'name_zh': u'尼泊尔'},
     {'name': 'India', 'language': 'Hindi', 'demonym': 'Indian', 'currency': 'rupee', 'state': 'Asia', 'capital': 'New Delhi', 'name_zh': u'印度'},
-    {'name': 'Sri Lanka', 'language': 'Sinhalese', 'demonym': 'Sri Lankan', 'currency': 'Sri Lankan rupee', 'state': 'Asia', 'capital': 'Sri Jayawardenepura Kotte', 'name_zh': u'斯里兰卡'},
+    {'name': 'Sri Lanka', 'language': 'Sinhalese', 'demonym': 'Sri Lankan', 'currency': 'Sri Lankan rupee', 'state': 'Asia', 'capital': 'Colombo', 'name_zh': u'斯里兰卡'},
     {'name': 'Pakistan', 'language': 'Urdu', 'demonym': 'Pakistani', 'currency': 'rupee', 'state': 'Asia', 'capital': 'Islamabad', 'name_zh': u'巴基斯坦'},
 
     {'name': 'Iran', 'language': 'Persian', 'demonym': 'Iranian', 'currency': 'Rial', 'state': 'Asia', 'capital': 'Tehran', 'name_zh': u'伊朗'},
